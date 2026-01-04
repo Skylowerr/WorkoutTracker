@@ -43,7 +43,7 @@ This project was built with a strong focus on core OOP principles:
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/Skylowerr/WorkoutTracker.git
+    git clone https://github.com/Skylowerr/WorkoutTracker.git
     ```
 
 2.  **Backend Setup:**
