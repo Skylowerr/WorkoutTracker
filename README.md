@@ -21,7 +21,7 @@ The project consists of two main components:
 * **Language:** C#
 * **Framework:** .NET 8 (Minimal APIs)
 * **Database:** Microsoft SQL Server (MSSQL)
-* **Features:** Entity Framework Core (or Dapper), Repository Pattern, and Dependency Injection
+* **Features:** Entity Framework Core, Repository Pattern, and Dependency Injection
 
 ## 🏗 OOP Principles Applied
 
