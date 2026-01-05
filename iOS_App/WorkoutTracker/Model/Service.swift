@@ -4,7 +4,7 @@ class APIService {
     private let exerciseURL = "http://127.0.0.1:5099/api/exercises"
     private let muscleGroupURL = "http://127.0.0.1:5099/api/musclegroups"
 
-                        //işin bitince bana bu paketi teslim et
+    //Verileri internetten çektiği için biraz beklememiz gerektiğini söylüyoruz
     func fetchExercises(completion: @escaping (Result<[Exercise], Error>) -> Void) {
         guard let url = URL(string: exerciseURL) else { return }
         URLSession.shared.dataTask(with: url) { data, _, error in //Sunucuya gidip dataları çeker
