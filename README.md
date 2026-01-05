@@ -1,5 +1,8 @@
 # Workout Tracker Full-Stack Project 🏋️‍♂️
 
+![WorkoutTrackerGif](https://github.com/user-attachments/assets/723ed722-0cee-4e77-afec-9a1e4e3d2421)
+
+
 This is a comprehensive **Object-Oriented Programming (OOP)** project developed for my university course. It is a full-stack workout management system that allows users to track exercises, manage muscle groups, and organize their fitness routines.
 
 ## 🚀 Project Overview
@@ -20,6 +23,10 @@ The project consists of two main components:
 ### Backend (API)
 * **Language:** C#
 * **Framework:** .NET 8 (Minimal APIs)
+
+Uploading Ekran Kaydı 2026-01-05 13.33.46.mov…
+
+
 * **Database:** Microsoft SQL Server (MSSQL)
 * **Features:** Entity Framework Core, Repository Pattern, and Dependency Injection
 
