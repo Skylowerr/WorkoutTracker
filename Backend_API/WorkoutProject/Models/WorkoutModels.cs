@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Models
 {
     // Egzersiz bilgilerini tutan ana sınıf
-    [Table("Exercises")] // Veritabanındaki tablo adın
+    [Table("Exercises")] //Exercises in SQL
     public class Exercise
     {
         public int Id { get; set; }
