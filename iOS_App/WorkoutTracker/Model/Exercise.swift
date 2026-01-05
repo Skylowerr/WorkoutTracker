@@ -8,7 +8,7 @@ struct MuscleGroup: Identifiable, Codable {
 
     enum CodingKeys: String, CodingKey {
         case id = "Id"
-        case groupName = "GroupName"        // Matches your C# property exactly
+        case groupName = "GroupName"
         case yearEstablished = "YearEstablished"
     }
 }
