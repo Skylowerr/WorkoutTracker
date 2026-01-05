@@ -1,9 +1,3 @@
-//
-//  MuscleGroupChipView.swift
-//  WorkoutTracker
-//
-//  Created by Emirhan Gökçe on 4.01.2026.
-//
 
 import SwiftUI
 
