@@ -7,7 +7,8 @@ namespace WorkoutTracker.Context
     {
         public WorkoutDbContext(DbContextOptions<WorkoutDbContext> options) : base(options) { }
 
-        // Model dosyasındaki sınıf isminle aynı olmalı
+        //SQL'deki tabloları C# tarafında sanal bir liste haline getirir
+        //Bunlar üzerinde işlem yaptığımzda SQL komuduna çevirir
         public DbSet<Exercise> Exercises { get; set; }
         public DbSet<MuscleGroup> MuscleGroups { get; set; }
     }
