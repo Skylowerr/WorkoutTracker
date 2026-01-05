@@ -58,4 +58,4 @@ This project was built with a strong focus on core OOP principles:
     * Press `Cmd + R` to run on Simulator.
 
 ---
-*Developed by [Emirhan Gökce] as a University OOP Project.*
+*Developed by [Emirhan Gökçe] as a University OOP Project.*
