@@ -13,6 +13,7 @@ namespace WorkoutTracker.Endpoints
             // --- EXERCISE ENDPOINTS ---
             var exGroup = app.MapGroup("/api/exercises");
 
+            //Önce veritabanından her şeyi çeker. Eğer search parametresi doluysa isim içinde o kelimeyi arar ve sadece uyanları döner.
             exGroup.MapGet("/", async (IDbService db, string? search) =>
             {
                 var list = await db.GetAll<Exercise>();
@@ -21,9 +22,11 @@ namespace WorkoutTracker.Endpoints
                 return Results.Ok(list);
             });
 
+            //Swift tarafında bir egzersize tıkladığında onun detaylarını veritabanından bulup getirir.
             exGroup.MapGet("/{id}", async (IDbService db, int id) => 
                 await db.Get<Exercise>(id) is Exercise item ? Results.Ok(item) : Results.NotFound());
 
+            //Swift tarafında Save'e basınca veriyi alır veritabanına ekler.
             exGroup.MapPost("/", async (IDbService db, Exercise item) => {
                 await db.AddAsync(item);
                 return Results.Created($"/api/exercises/{item.Id}", item);
@@ -32,6 +35,7 @@ namespace WorkoutTracker.Endpoints
             exGroup.MapPut("/{id}", async (IDbService db, int id, Exercise input) => {
                 var existing = await db.Get<Exercise>(id);
                 if (existing == null) return Results.NotFound();
+                //Gelen verileri onceki verilerle degistirir.
                 existing.Name = input.Name;
                 existing.Description = input.Description;
                 existing.IsCardio = input.IsCardio;
@@ -39,7 +43,7 @@ namespace WorkoutTracker.Endpoints
                 existing.Reps = input.Reps;
                 existing.MuscleGroupID = input.MuscleGroupID;
                 await db.UpdateAsync(existing);
-                return Results.NoContent();
+                return Results.NoContent(); //Returns 204 (Succeed but nothing returns)
             });
 
             exGroup.MapDelete("/{id}", async (IDbService db, int id) => {
