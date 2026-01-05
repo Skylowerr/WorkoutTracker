@@ -1,10 +1,3 @@
-//
-//  WorkoutTrackerApp.swift
-//  WorkoutTracker
-//
-//  Created by Emirhan Gökçe on 3.01.2026.
-//
-
 import SwiftUI
 
 @main
