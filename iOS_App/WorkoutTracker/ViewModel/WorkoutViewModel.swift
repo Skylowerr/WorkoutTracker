@@ -24,6 +24,7 @@ class WorkoutViewModel: ObservableObject {
     }
     
     // Filtreleme mantığı
+    //Eğer bir kategori seçiliyse sadece o kategoriye ait egzersizleri döner, seçili değilse her şeyi döner.
     var filteredExercises: [Exercise] {
         if let groupID = selectedMuscleGroupID {
             return exercises.filter { $0.muscleGroupID == groupID }
@@ -51,11 +52,11 @@ class WorkoutViewModel: ObservableObject {
     }
 
     func performSaveExercise(item: Exercise, isNew: Bool) {
-        let urlString = isNew ? baseExURL : "\(baseExURL)/\(item.id ?? 0)"
+        let urlString = isNew ? baseExURL : "\(baseExURL)/\(item.id ?? 0)" //Yeni kayıtsa ekler, kayıt varsa günceller
         guard let url = URL(string: urlString) else { return }
 
         var request = URLRequest(url: url)
-        request.httpMethod = isNew ? "POST" : "PUT"
+        request.httpMethod = isNew ? "POST" : "PUT" //Yeni kayıtsa ekler, kayıt varsa günceller
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
 
         var uploadItem = item
