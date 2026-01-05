@@ -15,7 +15,7 @@ namespace Models
         public int MuscleGroupID { get; set; }
     }
 
-    // Kas grubu bilgilerini tutan yardımcı sınıf
+    [Table("MuscleGroups")]
     public class MuscleGroup
     {
         public int Id { get; set; }
