@@ -27,6 +27,7 @@ class WorkoutViewModel: ObservableObject {
     //Eğer bir kategori seçiliyse sadece o kategoriye ait egzersizleri döner, seçili değilse her şeyi döner.
     var filteredExercises: [Exercise] {
         if let groupID = selectedMuscleGroupID {
+            //exercise.muscleGroupID
             return exercises.filter { $0.muscleGroupID == groupID }
         }
         return exercises
