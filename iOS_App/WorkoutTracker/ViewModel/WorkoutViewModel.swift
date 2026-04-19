@@ -6,8 +6,8 @@ class WorkoutViewModel: ObservableObject {
     @Published var muscleGroups: [MuscleGroup] = []
     @Published var selectedMuscleGroupID: Int? = nil
 
-    let baseExURL = "http://127.0.0.1:5099/api/exercises"
-    let baseMgURL = "http://127.0.0.1:5099/api/musclegroups"
+    let baseExURL = "BASE_URL_HERE"
+    let baseMgURL = "BASE_URL_HERE"
 
     
     // WorkoutViewModel.swift içinde
