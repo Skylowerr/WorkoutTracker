@@ -1,8 +1,8 @@
 import Foundation
 
 class APIService {
-    private let exerciseURL = "http://127.0.0.1:5099/api/exercises"
-    private let muscleGroupURL = "http://127.0.0.1:5099/api/musclegroups"
+    private let exerciseURL = "BASE_URL_HERE"
+    private let muscleGroupURL = "BASE_URL_HERE"
 
     //Verileri internetten çektiği için biraz beklememiz gerektiğini söylüyoruz
     func fetchExercises(completion: @escaping (Result<[Exercise], Error>) -> Void) {
